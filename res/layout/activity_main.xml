@@ -1,0 +1,251 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:background="@drawable/background3" >
+    
+ <!--  <ImageView 
+android:layout_width="fill_parent" android:layout_height="fill_parent"
+android:src="@drawable/background" android:scaleType="fitXY" /> -->
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+         >
+
+        <!-- Buttons -->
+
+        <Button
+            android:id="@+id/btnR"
+            android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+            
+            android:layout_alignParentTop="true"
+            android:layout_weight="1.0"
+            android:background="@android:color/holo_red_light"
+            android:text="red" />
+
+        <Button
+            android:id="@+id/btnG"
+            android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+            
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/btnR"
+            android:layout_weight="1.0"
+            android:background="@android:color/holo_green_light"
+            android:text="green" />
+
+        <Button
+            android:id="@+id/btnB"
+            android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+            
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/btnG"
+            android:layout_weight="1.0"
+            android:background="@android:color/holo_blue_light"
+            android:text="blue" />
+        </LinearLayout>
+        
+    
+    <!--  White  -->
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="70dp"
+        android:alpha="0.7"
+        >
+    <Button
+            android:id="@+id/btnWhite"
+            android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+            
+            android:layout_alignParentTop="true"
+            
+            android:layout_weight="1.0"
+             android:layout_below="@+id/btnR"
+                    
+             android:background="@android:color/white"             
+            android:text="white" />
+    
+        </LinearLayout>
+    <!--  Fade -->
+     <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="120dp"
+        >
+    <Button
+            android:id="@+id/btnF"
+            android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+            
+            android:layout_alignParentTop="true"
+            
+            android:layout_weight="1.0"
+             android:layout_below="@+id/btnR"
+            android:text="fade" />
+    
+        </LinearLayout>
+        
+     
+     <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="170dp"
+        android:alpha="0.75" 
+        >
+    <Button
+            android:id="@+id/btndark"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_alignParentTop="true"
+            android:layout_weight="1.0"
+             android:layout_below="@+id/btnF"
+                                      android:background="@drawable/darkbtn" 
+             
+            android:text="dark" />
+    <Button
+            android:id="@+id/btnregular"
+            android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+            
+            android:layout_alignParentTop="true"
+                         android:background="@drawable/regularbtn" 
+            
+            android:layout_weight="1.0"
+             android:layout_below="@+id/btnF"
+            android:text="regular" />
+    
+    <Button
+            android:id="@+id/btnbright"
+            android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+             android:background="@drawable/brightbtn" 
+            android:layout_alignParentTop="true"
+            
+            android:layout_weight="1.0"
+             android:layout_below="@+id/btnF"
+            android:text="bright" />
+        </LinearLayout>
+         <LinearLayout
+        android:id="@+id/linearLayout7"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="230dp"
+            android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        
+        android:alpha="0.75" 
+        >
+    <Button
+            android:id="@+id/btnorange"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_alignParentTop="true"
+            android:layout_weight="1.0"
+             android:layout_below="@+id/btnF"
+             android:background="@drawable/orangebtn" 
+
+             
+            android:text="orange" />
+  
+    
+        </LinearLayout>
+        <!-- RadioButtons  & Seekbar-->
+         
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="1.0dip"
+        android:paddingLeft="4.0dip"
+        android:paddingRight="4.0dip"
+        android:paddingTop="5.0dip"
+        android:layout_marginTop="160dp"
+         >
+   <RadioGroup
+    android:id="@+id/radioGroup1"
+    android:orientation="horizontal"
+    
+    android:layout_width="fill_parent"
+     android:layout_height="fill_parent">
+
+   </RadioGroup>
+
+</LinearLayout>
+ 
+    <!--  Seekbar -->
+ <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="240dp"
+        >
+     </LinearLayout>
+    <!--  More Buttons -->
+     <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="290dp"
+        >
+
+    <Button
+        android:id="@+id/btnOff"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_weight="1.0"
+        android:text="LEDs off" />
+    
+        </LinearLayout>
+        <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="450dp"
+        >
+      <Button
+        android:id="@+id/btnOn"
+                android:layout_width="fill_parent"
+        android:onClick="SocketConnection"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_weight="1.0"
+        android:text="Connect" />
+
+      <Button
+          android:id="@+id/btnBTOff"
+          android:layout_width="196dp"
+          android:layout_height="wrap_content"
+          android:layout_alignParentTop="true"
+          android:onClick="BluetoothOff"
+          android:text="Turn Bluetooth Off" />
+    
+    </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="© Mathis Florian 2014" 
+            android:textColor="@android:color/white"/>
+        
+</RelativeLayout>
