@@ -6,7 +6,7 @@ My first Android App - it's an app to control a RGB LED strip via Smartphone.
 
 #3 Functionality
 1. There are several buttons on the View. 
-⋅⋅* one for the colors red, green, blue
+⋅⋅⋅one for the colors red, green, blue
 ⋅⋅* one for the color white
 ⋅⋅* 3 buttons for the brightness ( dark, regular, bright )
 ⋅⋅* and some more buttons for other chosen colors - for instance orange
