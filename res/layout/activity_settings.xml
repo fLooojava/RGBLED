@@ -1,0 +1,27 @@
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="42dp"
+    android:text="Please enter your MAC adress of your bluetooth modul to operate with your arduino:" />
+
+<EditText
+    android:id="@+id/mactxt"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:ems="10" >
+
+    <requestFocus />
+</EditText>
+
+<Button
+    android:id="@+id/btnSaveMAC"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="save" />
+
+</LinearLayout>

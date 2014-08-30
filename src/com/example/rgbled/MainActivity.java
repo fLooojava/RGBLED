@@ -11,6 +11,7 @@ import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
 import android.content.Intent;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -31,7 +32,8 @@ public class MainActivity extends Activity {
    };
    @Override
    protected void onCreate(Bundle savedInstancestatus) {
-      super.onCreate(savedInstancestatus);
+      
+	   super.onCreate(savedInstancestatus);
       setContentView(R.layout.activity_main);
       BA = BluetoothAdapter.getDefaultAdapter();
       Red = (Button)findViewById(R.id.btnR);
@@ -207,5 +209,27 @@ public class MainActivity extends Activity {
       // Inflate the menu; this adds items to the action bar if it is present.
       getMenuInflater().inflate(R.menu.main, menu);
       return true;
+   }
+   @Override
+   public boolean onOptionsItemSelected(MenuItem item)
+   {
+
+	   switch (item.getItemId()) {
+	   
+	   case R.id.action_settings:
+		   Intent Intentsettings = new Intent(this,SettingsActivity.class);
+		   this.startActivity(Intentsettings);
+		   return true;
+	   case R.id.menu_about:
+		   Intent Intentabout = new Intent(this,AboutActivity.class);
+		   this.startActivity(Intentabout);
+	   return true;
+	   
+	   
+	    
+	   }
+	return true;
+
+
    }
 }
