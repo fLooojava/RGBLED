@@ -3,6 +3,7 @@ RGBLED Android APP together with an Arduino - Bluetooth modul - RGB LED strip
 
 My first Android App - it's an app to control a RGB LED strip via Smartphone. 
 
+[V1.0]
 
 # Functionality
 * There are several buttons on the View. 
