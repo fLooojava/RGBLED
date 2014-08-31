@@ -10,15 +10,18 @@ import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
 import android.content.Intent;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
-   private Button Red,Green,Blue,BToff,Fade,White,Dark,Bright,Regular,Orange;
+   private Button Red,Green,Blue,BToff,Fade,White,Dark,Bright,Regular,Orange,BTMAC;
+   private TextView textViewtest;
    private BluetoothAdapter BA;
    private BluetoothSocket socket;
    private String output;
@@ -46,14 +49,32 @@ public class MainActivity extends Activity {
       Bright = (Button)findViewById(R.id.btnbright);
       Orange = (Button)findViewById(R.id.btnorange);
       Fade =(Button)findViewById(R.id.btnF);
-      
+      textViewtest=(TextView)findViewById(R.id.textView2);
+      BTMAC =(Button)findViewById(R.id.btnMAC);
+     
+      BTMAC.setOnClickListener( new View.OnClickListener() {
+		
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+		      //receiving intents from the settingsactivity
+		      Intent i = getIntent();
+		      // Receiving the Data
+		      String mac = i.getStringExtra("macaddress");
+		      Log.w("myApp", mac);
+		      textViewtest.setText(mac);
+		      // Displaying Received data
+		}
+	});
 
+      
       BluetoothOn();
       
       Red.setOnClickListener(new View.OnClickListener(){
    		public void onClick(View v) {
    			sendValue(ColorArray[0]);
    			setstatus("red");
+   	     
    		}
        });
       Green.setOnClickListener(new View.OnClickListener(){

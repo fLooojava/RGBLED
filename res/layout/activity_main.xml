@@ -246,5 +246,23 @@ android:src="@drawable/background" android:scaleType="fitXY" /> -->
             android:layout_centerHorizontal="true"
             android:text="© Mathis Florian 2014" 
             android:textColor="@android:color/white"/>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textView1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="36dp"
+            android:text="TextView" />
+
+        <Button
+            android:id="@+id/btnMAC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView2"
+            android:layout_alignBottom="@+id/textView2"
+            android:layout_toLeftOf="@+id/textView2"
+            android:text="Button" />
         
 </RelativeLayout>
