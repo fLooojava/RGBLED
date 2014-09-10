@@ -48,6 +48,7 @@ public class SettingsActivity extends Activity
 	                mainScreen.putExtra("macaddress", mac);
 	                // Intent starten und zur zweiten Activity wechseln
 	                startActivity(mainScreen);
+	                
 				}
 			});
 	       
