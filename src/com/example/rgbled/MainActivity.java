@@ -9,7 +9,9 @@ import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -20,8 +22,7 @@ import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
-   private Button Red,Green,Blue,BToff,Fade,White,Dark,Bright,Regular,Orange,BTMAC;
-   private TextView textViewtest;
+   private Button Red,Green,Blue,BToff,Fade,White,Dark,Bright,Regular,Orange;
    private BluetoothAdapter BA;
    private BluetoothSocket socket;
    private String output;
@@ -49,23 +50,7 @@ public class MainActivity extends Activity {
       Bright = (Button)findViewById(R.id.btnbright);
       Orange = (Button)findViewById(R.id.btnorange);
       Fade =(Button)findViewById(R.id.btnF);
-      textViewtest=(TextView)findViewById(R.id.textView2);
-      BTMAC =(Button)findViewById(R.id.btnMAC);
-     
-      BTMAC.setOnClickListener( new View.OnClickListener() {
-		
-		@Override
-		public void onClick(View v) {
-			// TODO Auto-generated method stub
-		      //receiving intents from the settingsactivity
-		      Intent i = getIntent();
-		      // Receiving the Data
-		      String mac = i.getStringExtra("macaddress");
-		      Log.w("myApp", mac);
-		      textViewtest.setText(mac);
-		      // Displaying Received data
-		}
-	});
+
 
       
       BluetoothOn();
@@ -152,16 +137,23 @@ public class MainActivity extends Activity {
 
      public void SocketConnection(View view){
     	socketconn = true;
-    	String address ="20:13:12:04:07:25";
+    	SharedPreferences sharedpreferences;
+		final String MyPREFERENCES = "MyPrefs" ;
+ 	    sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+ 	    String address = sharedpreferences.getString("mac", "");
+
+    	// hardcoded string - String address ="20:13:12:04:07:25";
 		BluetoothDevice device = BA.getRemoteDevice(address);
       try {
 		socket = device.createRfcommSocketToServiceRecord(UUID.fromString("00001101-0000-1000-8000-00805f9b34fb"));
 		socket.connect();
 		Toast.makeText(getApplicationContext(),"Connection established!" ,Toast.LENGTH_LONG).show();
+  	   Log.d("MAC#",address);
       } catch (IOException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 		Toast.makeText(getApplicationContext(),"Connection refused, cannot connect!" ,Toast.LENGTH_LONG).show();
+		Log.d("MAC#",address);
 
 	}
     }

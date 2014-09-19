@@ -25,7 +25,7 @@ public class SettingsActivity extends Activity
 	        btnSaveMAC = (Button)findViewById(R.id.btnSaveMAC);
 	 	    mactxt = (EditText)findViewById(R.id.mactxt);
 	 	    textViewMAC = (TextView)findViewById(R.id.textViewMAC);
-	 	   String s = textViewMAC.getText().toString();
+	 	    String s = textViewMAC.getText().toString();
 	 	   
 	 	    sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
 	 	      if (sharedpreferences.contains("mac"))
@@ -41,22 +41,23 @@ public class SettingsActivity extends Activity
 					// TODO Auto-generated method stub
 			        String mac = mactxt.getText().toString();
 			        textViewMAC.setText(mac);
-			        saveMAC(mac);
+			        saveMAC("mac", mac);
 		            //Neues Intent anlegen
 	                Intent mainScreen = new Intent(getApplicationContext(), MainActivity.class);
 	                //Intent mit den Daten füllen
 	                mainScreen.putExtra("macaddress", mac);
 	                // Intent starten und zur zweiten Activity wechseln
-	                startActivity(mainScreen);
+	               // startActivity(mainScreen);
+	                finish();
 	                
 				}
 			});
 	       
 	    }
-	   public void saveMAC(String s){
+	   public void saveMAC(String spString, String s){
 		  
 		   Editor editor = sharedpreferences.edit();
-		   editor.putString("mac", s);
+		   editor.putString(spString, s);
 		   editor.commit();
 		   
 	   };
