@@ -16,13 +16,16 @@ My first Android App - it's an app to control a RGB LED strip via Smartphone.
 2. The Bluetooth will be activated when the user starts the app. ( onStart )
 3. You can connect to the Bluetooth modul on the Arduino by pressing the "connect" button. Make sure that you have selected the correct MAC address in the settings activity! Check your input twice.
 
-# App overview
-![alt text](https://github.com/fLooojava/RGBLED/blob/master/src/images/Screenshot%20from%202014-07-07%2013:15:38.png?raw=true "App Overview")
 
 
 #  future goals v1.1
 * VERSION 1.1 
-- seperated activity for personalized color modes
-- screen size adaption for all kinds of sizes
-- elaboration of the GUI
-- documentation 
+	- seperated activity for personalized color modes
+	- screen size adaption for all kinds of sizes
+	- elaboration of the GUI
+	- documentation
+
+ 
+# App overview
+
+![alt text](https://github.com/fLooojava/RGBLED/blob/master/src/images/Screenshot%20from%202014-07-07%2013:15:38.png?raw=true "App Overview")
