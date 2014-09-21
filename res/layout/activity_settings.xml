@@ -2,12 +2,13 @@
   xmlns:android="http://schemas.android.com/apk/res/android"
   android:orientation="vertical"
   android:layout_width="match_parent"
-  android:layout_height="match_parent">
-
+  android:layout_height="match_parent"
+  android:background="@drawable/background">
 <TextView
     android:layout_width="match_parent"
     android:layout_height="42dp"
-    android:text="Please enter your MAC address of your bluetooth modul to operate with your arduino:" />
+    android:text="Please enter your MAC address of your bluetooth modul to operate with your arduino:" 
+    android:textColor="@android:color/white"/>
 
 <EditText
     android:id="@+id/mactxt"
@@ -25,6 +26,7 @@
     android:layout_height="wrap_content"
     android:text="save" />
 
+
 <RelativeLayout     android:layout_width="fill_parent"
     android:layout_height="wrap_content">
 
@@ -32,14 +34,24 @@
     android:id="@+id/txtViewcurrentmac"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="current MAC address:" />
+    android:text="current MAC address:" 
+    android:textColor="@android:color/white"/>
 
 <TextView
     android:id="@+id/textViewMAC"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_alignParentRight="true"
-    android:layout_toRightOf="@+id/txtViewcurrentmac" />
+    android:layout_toRightOf="@+id/txtViewcurrentmac" 
+    />
 
 </RelativeLayout>
+
+<TextView
+    android:id="@+id/textView1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="20:13:12:04:07:25"
+    android:textAppearance="?android:attr/textAppearanceMedium" />
+
 </LinearLayout>
